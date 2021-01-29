@@ -1,15 +1,9 @@
 
 from importlib import import_module
-from apminsight.agentfactory import get_agent
 from apminsight.logger import agentlogger
 from apminsight.constants import class_str, method_str, wrapper_str, wrap_args
-from apminsight.metric.txn import Transaction
 from apminsight.instrumentation.modules import modules_info
-from apminsight.metric.tracker import Tracker
-from apminsight.context import is_no_active_txn, get_cur_tracker, set_cur_tracker
-from apminsight.constants import component_str, extract_info
 from apminsight.util import is_callable
-from apminsight.instrumentation.util import create_tracker_info
 from apminsight.instrumentation.wrapper import default_wrapper, args_wrapper
 
 """

@@ -1,5 +1,5 @@
-
 from apminsight.logger import agentlogger
+
 
 agent_instance = None
 

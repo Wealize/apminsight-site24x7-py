@@ -1,7 +1,8 @@
-
 from apminsight.util import current_milli_time
 from apminsight.metric.error import ErrorInfo
 from apminsight.constants import max_trackers, max_exc_per_trace
+
+
 class Tracker:
 
     def __init__(self, tracker_info={}):

@@ -1,4 +1,3 @@
-
 import time
 import os
 from apminsight import constants

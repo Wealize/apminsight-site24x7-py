@@ -1,5 +1,3 @@
-
-from apminsight import constants
 from apminsight.instrumentation.packages import django
 from apminsight.instrumentation.packages import sqlite
 from apminsight.instrumentation.packages import mysql
@@ -8,6 +6,7 @@ from apminsight.instrumentation.packages import redis
 from apminsight.instrumentation.packages import jinja2
 from apminsight.instrumentation.packages import pymemcache
 from apminsight.instrumentation.packages import psycopg2
+
 
 modules_info = {}
 modules_info.update(django.module_info)

@@ -1,6 +1,6 @@
-
 from apminsight.constants import method_str, component_str, is_db_tracker
 from apminsight.metric.tracker import Tracker
+
 
 def create_tracker_info(module, method_info, parent_tracker=None):
     tracker_name = module + '.' + method_info[method_str]

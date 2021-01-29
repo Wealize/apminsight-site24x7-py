@@ -1,4 +1,3 @@
-
 class DbMetric:
 
     def __init__(self):

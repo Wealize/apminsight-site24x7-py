@@ -5,8 +5,6 @@
 """
 
 import platform
-import requests
-import json
 import time
 from apminsight.agentfactory import get_agent
 from apminsight.constants import arh_connect, arh_data

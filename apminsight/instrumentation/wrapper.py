@@ -1,11 +1,10 @@
-
 from apminsight.agentfactory import get_agent
 from apminsight.logger import agentlogger
 from apminsight.constants import wrap_args
 from apminsight.util import is_callable
 from apminsight.context import clear_cur_context
 from apminsight.metric.tracker import Tracker
-from apminsight.constants import component_str, extract_info
+from apminsight.constants import extract_info, method_str
 from apminsight.instrumentation.util import create_tracker_info
 from apminsight.context import is_no_active_txn, get_cur_tracker, set_cur_tracker
 
@@ -55,7 +54,11 @@ def default_wrapper(original, module, method_info):
         return res
 
     # special handling for flask route decorator
-    wrapper.__name__ = original.__name__
+    if hasattr(original, '__name__'):
+        wrapper.__name__ = original.__name__
+    else:
+        wrapper.__name__ = method_info[method_str]
+
     return wrapper
 
 

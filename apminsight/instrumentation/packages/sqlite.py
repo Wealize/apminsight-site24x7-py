@@ -1,4 +1,3 @@
-
 from apminsight import constants
 from apminsight.instrumentation.dbapi2 import ConnectionProxy
 

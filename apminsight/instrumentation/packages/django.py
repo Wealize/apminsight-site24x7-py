@@ -1,6 +1,6 @@
-
 from apminsight import constants
 from apminsight.instrumentation.wrapper import wsgi_wrapper
+
 
 module_info = {
     'django.core.handlers.wsgi' : [

@@ -1,5 +1,3 @@
-
-
 from django.apps import AppConfig
 from django.conf import settings
 from apminsight.agentfactory import get_agent

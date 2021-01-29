@@ -1,8 +1,9 @@
-
 from apminsight import constants
-from .wrapper import default_wrapper
 from apminsight.util import is_non_empty_string
 from apminsight.agentfactory import get_agent
+
+from .wrapper import default_wrapper
+
 
 class CursorProxy():
 
@@ -48,7 +49,6 @@ class CursorProxy():
 
 
 class ConnectionProxy():
-
     def __init__(self, conn, comp, host_info):
         self._apm_wrap_conn = conn
         self._apm_comp_name = comp
@@ -89,7 +89,8 @@ class ConnectionProxy():
     @staticmethod
     def instrument_conn(original, module, method_info):
         def conn_wrapper(*args, **kwargs):
-            conn = original(*args, **kwargs)
+            conn =  original(*args, **kwargs)
+
             if conn is not None:
                 comp = method_info.get(constants.component_str, '')
                 host_info = ConnectionProxy.get_host_info(method_info, kwargs)
@@ -99,4 +100,3 @@ class ConnectionProxy():
             return conn
 
         return conn_wrapper
-

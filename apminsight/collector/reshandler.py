@@ -1,4 +1,3 @@
-
 from apminsight.logger import agentlogger
 from apminsight.agentfactory import get_agent
 from apminsight import constants

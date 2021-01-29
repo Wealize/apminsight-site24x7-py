@@ -1,10 +1,10 @@
-
 from apminsight.agentfactory import get_agent
 from apminsight.logger import agentlogger
 from apminsight.metric.apdexmetric import TxnMetric
 from apminsight.metric.dbmetric import DbMetric
 from apminsight.constants import webtxn_prefix
 from apminsight.util import is_empty_string
+
 
 class Metricstore:
 

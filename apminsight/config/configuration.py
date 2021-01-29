@@ -1,4 +1,3 @@
-
 import os
 import apminsight
 import apminsight.constants as constants

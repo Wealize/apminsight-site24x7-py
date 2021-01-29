@@ -1,8 +1,8 @@
-
 from apminsight import constants
 from apminsight.util import is_non_empty_string
 from apminsight.metric.tracker import Tracker
 from apminsight.context import get_cur_tracker
+
 
 def extract_info(tracker, args):
     if not isinstance(tracker, Tracker):

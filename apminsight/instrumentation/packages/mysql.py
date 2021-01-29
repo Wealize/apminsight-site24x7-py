@@ -1,7 +1,7 @@
-
 from apminsight import constants
 from apminsight.util import is_non_empty_string
 from apminsight.agentfactory import get_agent
+
 
 def extract_query(tracker, args=(), kwargs={}, return_value=None):
     threshold = get_agent().get_threshold()

@@ -1,4 +1,3 @@
-
 from apminsight.agentfactory import get_agent
 from copy import copy
 

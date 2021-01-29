@@ -1,4 +1,3 @@
-
 from apminsight.util import current_milli_time
 from apminsight.metric.tracker import Tracker
 from apminsight.metric.dbtracker import DbTracker
@@ -6,6 +5,7 @@ from apminsight.agentfactory import get_agent
 from apminsight.util import is_empty_string
 from apminsight.metric.component import Component
 from apminsight.constants import webtxn_prefix
+
 
 class Transaction:
 

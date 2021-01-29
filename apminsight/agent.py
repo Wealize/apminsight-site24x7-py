@@ -1,5 +1,3 @@
-
-import os
 from apminsight.collector.connhandler import init_connection
 from apminsight.instrumentation import init_instrumentation
 from apminsight.metric.txn import Transaction
@@ -13,6 +11,7 @@ from apminsight import context
 from apminsight import constants
 from apminsight.logger import agentlogger
 from apminsight import util
+
 
 def initalize(options={}):
     options['agentbasedir'] = util.check_and_create_base_dir()

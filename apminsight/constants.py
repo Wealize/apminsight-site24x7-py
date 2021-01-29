@@ -1,4 +1,3 @@
-
 class_str = 'class'
 method_str = 'method'
 wrapper_str = 'wrapper'

@@ -1,9 +1,9 @@
-
 import os
 import sys
 import logging
 from logging.handlers import RotatingFileHandler
 from apminsight.constants import agent_logger_name, logs_dir, base_dir, log_name, log_format
+
 
 agentlogger = None
 

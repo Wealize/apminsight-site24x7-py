@@ -1,5 +1,5 @@
-
 from apminsight.util import is_ext_comp, is_non_empty_string
+
 
 class Component:
 

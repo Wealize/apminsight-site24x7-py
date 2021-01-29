@@ -1,10 +1,11 @@
+import re
 
 from apminsight.metric.tracker import Tracker
 from apminsight.metric.dbmetric import DbMetric
 from apminsight.agentfactory import get_agent
 from apminsight.util import get_masked_query, is_empty_string
 from apminsight.constants import db_opn_regex
-import re
+
 
 class DbTracker(Tracker):
 

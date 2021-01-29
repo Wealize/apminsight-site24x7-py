@@ -1,4 +1,3 @@
-
 from apminsight.logger import agentlogger
 from apminsight.util import current_milli_time
 

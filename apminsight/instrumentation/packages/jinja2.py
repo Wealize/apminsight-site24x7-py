@@ -1,6 +1,5 @@
-
-
 from apminsight import constants
+
 
 module_info = {
     'jinja2.environment' : [

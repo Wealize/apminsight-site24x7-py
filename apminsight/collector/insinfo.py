@@ -1,4 +1,3 @@
-
 import json
 import os
 from apminsight.constants import instanceid, info_file_name
