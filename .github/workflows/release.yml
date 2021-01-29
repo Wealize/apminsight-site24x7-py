@@ -1,0 +1,40 @@
+name: PyPI release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  sentry-release:
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Set up poetry
+        run: |
+          pip3 install poetry
+          poetry config virtualenvs.create true
+          poetry config experimental.new-installer false
+          poetry config cache-dir
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/.cache/pypoetry/virtualenvs
+          key: poetry-${{ runner.os }}-${{ hashFiles('poetry.lock') }}
+          restore-keys: |
+            poetry-${{ runner.os }}-
+
+      - name: install deps
+        run: poetry install
+
+      - name: Build package
+        run: poetry build
+
+      - name: Release package
+        run: poetry publish -u __token__ -p ${{ secrets.PYPI_TOKEN }}
